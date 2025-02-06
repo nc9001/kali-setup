@@ -1,0 +1,14 @@
+---
+- name: Copying tmux config[user]
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/.tmux.conf"
+    dest: "{{ ansible_user_dir }}"
+    mode: "0644"
+
+- name: Copying tmux config[root]
+  become: true
+  become_method: ansible.builtin.sudo
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/.tmux.conf"
+    dest: "/root/"
+    mode: "0644"

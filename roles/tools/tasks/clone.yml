@@ -1,0 +1,25 @@
+---
+- name: Clone the github repo
+  become: true
+  become_method: ansible.builtin.sudo
+  ansible.builtin.git:
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+    depth: 1
+  loop:
+    - { repo: "https://github.com/PowerShellMafia/PowerSploit.git", dest: "/opt/PowerSploit" }
+    - { repo: "https://github.com/swisskyrepo/PayloadsAllTheThings.git", dest: "/opt/PayloadsAllTheThings" }
+    - { repo: "https://github.com/S3cur3Th1sSh1t/PowerSharpPack.git", dest: "/opt/PowerSharpPack" }
+    - { repo: "https://github.com/Flangvik/SharpCollection.git", dest: "/opt/SharpCollection" }
+    - { repo: "https://github.com/itm4n/PrivescCheck.git", dest: "/opt/PrivescCheck" }
+    - { repo: "https://github.com/urbanadventurer/username-anarchy.git", dest: "/opt/username-anarchy" }
+    - { repo: "https://github.com/dirkjanm/BloodHound.py.git", dest: "/opt/BloodHound.py" }
+    - { repo: "https://github.com/AlmondOffSec/PassTheCert.git", dest: "/opt/PassTheCert" }
+    - { repo: "https://github.com/internetwache/GitTools.git", dest: "/opt/GitTools" }
+    - { repo: "https://github.com/bitsadmin/wesng.git", dest: "/opt/wesng" }
+    - { repo: "https://github.com/samratashok/nishang.git", dest: "/opt/nishang" }
+    - { repo: "https://github.com/Greenwolf/ntlm_theft.git", dest: "/opt/ntlm_theft" }
+    - { repo: "https://github.com/byt3bl33d3r/CrackMapExec.git", dest: "/opt/CrackMapExec" }
+    - { repo: "https://github.com/ly4k/Certipy.git", dest: "/opt/Certipy" }
+    - { repo: "https://github.com/fortra/impacket.git", dest: "/opt/impacket" }
+    - { repo: "https://github.com/dirkjanm/krbrelayx.git", dest: "/opt/krbrelayx" }

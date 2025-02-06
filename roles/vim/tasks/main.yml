@@ -1,0 +1,14 @@
+---
+- name: Copying vim config[user]
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/.vimrc"
+    dest: "{{ ansible_user_dir }}"
+    mode: "0644"
+
+- name: Copying vim config[root]
+  become: true
+  become_method: ansible.builtin.sudo
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/.vimrc"
+    dest: /root/
+    mode: "0644"

@@ -1,0 +1,20 @@
+---
+- name: "Kali Setup"
+  hosts: localhost
+  connection: local
+  gather_facts: true
+  roles:
+    - role: tools
+    - role: browser
+    - role: tmux
+    - role: terminal
+    - role: vim
+    # below is ansible-galaxy roles
+    - role: gantsign.visual-studio-code
+      users:
+        - username: "{{ ansible_user_id }}"
+          visual_studio_code_extensions:
+            - streetsidesoftware.code-spell-checker
+            - ms-python.python
+            - DEVSENSE.phptools-vscode
+    - role: gantsign.terminator

@@ -1,0 +1,22 @@
+---
+- name: Update apt repo/cache
+  become: true
+  become_method: ansible.builtin.sudo
+  ansible.builtin.apt:
+    update_cache: true
+    force_apt_get: true
+
+- name: Install packages
+  become: true
+  become_method: ansible.builtin.sudo
+  ansible.builtin.package:
+    name:
+      - tmux
+      - gobuster
+#      - bloodhound
+      - feroxbuster
+      - jq
+      - xxd
+      - gdb
+      - ntpdate
+      - xclip

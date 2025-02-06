@@ -1,0 +1,45 @@
+---
+- name: Create directory
+  become: true
+  become_method: ansible.builtin.sudo
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0755"
+  loop:
+    - "/opt/PEASS-ng"
+    - "/opt/pspy"
+    - "/opt/mimikatz"
+    - "/opt/RunasCs"
+    - "/opt/kerbrute"
+    - "/opt/chisel"
+    - "/opt/cutter"
+    - "/opt/ghidra"
+    - "/opt/chainsaw"
+    - "/opt/obsidian"
+    - "/opt/jd-gui"
+
+- name: Download file
+  become: true
+  become_method: ansible.builtin.sudo
+  ansible.builtin.get_url:
+    url: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+    mode: "0644"
+  loop:
+    - { repo: "https://github.com/peass-ng/PEASS-ng/releases/download/20250202-a3a1123d/linpeas.sh", dest: "/opt/PEASS-ng" }
+    - { repo: "https://github.com/peass-ng/PEASS-ng/releases/download/20250202-a3a1123d/winPEASany.exe", dest: "/opt/PEASS-ng" }
+    - { repo: "https://github.com/peass-ng/PEASS-ng/releases/download/20250202-a3a1123d/winPEASx64.exe", dest: "/opt/PEASS-ng" }
+    - { repo: "https://github.com/peass-ng/PEASS-ng/releases/download/20250202-a3a1123d/winPEAS.bat", dest: "/opt/PEASS-ng" }
+    - { repo: "https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy64", dest: "/opt/pspy" }
+    - { repo: "https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy64s", dest: "/opt/pspy" }
+    - { repo: "https://github.com/gentilkiwi/mimikatz/releases/download/2.2.0-20220919/mimikatz_trunk.7z", dest: "/opt/mimikatz" }
+    - { repo: "https://github.com/antonioCoco/RunasCs/releases/download/v1.5/RunasCs.zip", dest: "/opt/RunasCs" }
+    - { repo: "https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64", dest: "/opt/kerbrute" }
+    - { repo: "https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_linux_amd64.gz", dest: "/opt/chisel" }
+    - { repo: "https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_windows_amd64.gz", dest: "/opt/chisel" }
+    - { repo: "https://github.com/rizinorg/cutter/releases/download/v2.3.4/Cutter-v2.3.4-Linux-x86_64.AppImage", dest: "/opt/cutter" }
+    # - { repo: "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.3_build/ghidra_11.3_PUBLIC_20250205.zip", dest: "/opt/ghidra" }
+    - { repo: "https://github.com/WithSecureLabs/chainsaw/releases/download/v2.11.0/chainsaw_all_platforms+rules.zip", dest: "/opt/chainsaw" }
+    - { repo: "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.4/Obsidian-1.8.4.AppImage", dest: "/opt/obsidian" }
+    - { repo: "https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/jd-gui-1.6.6.jar", dest: "/opt/jd-gui" }
