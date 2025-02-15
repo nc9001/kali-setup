@@ -23,3 +23,4 @@
     - { repo: "https://github.com/ly4k/Certipy.git", dest: "/opt/Certipy" }
     - { repo: "https://github.com/fortra/impacket.git", dest: "/opt/impacket" }
     - { repo: "https://github.com/dirkjanm/krbrelayx.git", dest: "/opt/krbrelayx" }
+    - { repo: "https://github.com/Pennyw0rth/NetExec.git", dest: "/opt/NetExec" }
