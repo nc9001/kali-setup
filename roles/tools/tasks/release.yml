@@ -27,7 +27,7 @@
   ansible.builtin.get_url:
     url: "{{ item.repo }}"
     dest: "{{ item.dest }}"
-    mode: "0644"
+    mode: "0755"
   loop:
     - { repo: "https://github.com/peass-ng/PEASS-ng/releases/download/20250202-a3a1123d/linpeas.sh", dest: "/opt/PEASS-ng" }
     - { repo: "https://github.com/peass-ng/PEASS-ng/releases/download/20250202-a3a1123d/winPEASany.exe", dest: "/opt/PEASS-ng" }
