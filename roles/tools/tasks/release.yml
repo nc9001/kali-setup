@@ -18,6 +18,8 @@
     - "/opt/chainsaw"
     - "/opt/obsidian"
     - "/opt/jd-gui"
+    - "/opt/BloodHound"
+    - "/opt/burpsuite"
 
 - name: Download file
   become: true
