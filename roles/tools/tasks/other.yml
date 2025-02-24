@@ -18,3 +18,11 @@
   become_method: ansible.builtin.sudo
   ansible.builtin.apt:
     deb: https://github.com/RustScan/RustScan/releases/download/2.3.0/rustscan_2.3.0_amd64.deb
+
+- name: Download Burpsuite Pro
+  become: true
+  become_method: ansible.builtin.sudo
+  ansible.builtin.get_url:
+    url: https://portswigger-cdn.net/burp/releases/download?product=pro&version=2025.1.2&type=Jar
+    dest: /opt/burpsuite/burpsuite_pro_v2025.1.2.jar
+    mode: "0755"
