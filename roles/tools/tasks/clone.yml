@@ -24,3 +24,5 @@
     - { repo: "https://github.com/fortra/impacket.git", dest: "/opt/impacket" }
     - { repo: "https://github.com/dirkjanm/krbrelayx.git", dest: "/opt/krbrelayx" }
     - { repo: "https://github.com/Pennyw0rth/NetExec.git", dest: "/opt/NetExec" }
+    - { repo: "https://github.com/dirkjanm/PKINITtools.git", dest: "/opt/PKINITtools" }
+    - { repo: "https://github.com/CravateRouge/bloodyAD.git", dest: "/opt/bloodyAD" }
