@@ -13,7 +13,6 @@
     name:
       - tmux
       - gobuster
-#      - bloodhound
       - feroxbuster
       - jq
       - xxd

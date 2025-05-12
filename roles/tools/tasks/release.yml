@@ -14,7 +14,6 @@
     - "/opt/kerbrute"
     - "/opt/chisel"
     - "/opt/cutter"
-    - "/opt/ghidra"
     - "/opt/chainsaw"
     - "/opt/obsidian"
     - "/opt/jd-gui"
@@ -41,7 +40,6 @@
     - { repo: "https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_linux_amd64.gz", dest: "/opt/chisel" }
     - { repo: "https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_windows_amd64.gz", dest: "/opt/chisel" }
     - { repo: "https://github.com/rizinorg/cutter/releases/download/v2.3.4/Cutter-v2.3.4-Linux-x86_64.AppImage", dest: "/opt/cutter" }
-    # - { repo: "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.3_build/ghidra_11.3_PUBLIC_20250205.zip", dest: "/opt/ghidra" }
     - { repo: "https://github.com/WithSecureLabs/chainsaw/releases/download/v2.11.0/chainsaw_all_platforms+rules.zip", dest: "/opt/chainsaw" }
     - { repo: "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.4/Obsidian-1.8.4.AppImage", dest: "/opt/obsidian" }
     - { repo: "https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/jd-gui-1.6.6.jar", dest: "/opt/jd-gui" }
