@@ -17,5 +17,5 @@
       - jq
       - xxd
       - gdb
-      - ntpdate
+      - ntpsec-ntpdate
       - xclip

@@ -5,5 +5,7 @@
   ansible.builtin.include_tasks: clone.yml
 - name: Download repository[github_release]
   ansible.builtin.include_tasks: release.yml
+- name: Install docker
+  ansible.builtin.include_tasks: docker.yml
 - name: Execute other task
   ansible.builtin.include_tasks: other.yml
