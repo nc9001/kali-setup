@@ -1,14 +1,14 @@
 ---
 - name: Create a directory
   ansible.builtin.file:
-    path: "addons"
+    path: "addon"
     state: directory
     mode: "0755"
 
 - name: Download firefox addons
   ansible.builtin.get_url:
     url: "{{ item }}"
-    dest: "addons/"
+    dest: "addon/"
     mode: "0644"
   loop:
     - https://addons.mozilla.org/firefox/downloads/file/4228676/foxyproxy_standard-8.9.xpi

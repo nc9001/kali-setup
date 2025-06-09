@@ -58,7 +58,7 @@ fi
 # install firefox addon
 if [ -e "addon" ]; then
     print_info "Install addon"
-    firefox "addon/*.xpi"
+    firefox addon/*.xpi
 else
     print_error "Not found: addon directory"
     exit 2
