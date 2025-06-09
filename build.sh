@@ -38,7 +38,7 @@ else
 fi
 
 # ansible-playbook install
-if [ -f "requirement.yml" ] || [ -f "main.yml" ]; then
+if [ -f "requirement.yml" ] && [ -f "main.yml" ]; then
     print_info "install ansible"
     ${galaxy} install -r requirement.yml
     ${playbook} main.yml -K
