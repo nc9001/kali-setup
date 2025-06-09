@@ -1,7 +1,13 @@
 # kali-setup
-Working on kali-linux 2024.4
+Working on kali-linux 2025.1c
 
 ## Setup
+```bash
+./build.sh
+```
+
+---
+build.shが失敗する場合
 ```bash
 # kali ユーザで実行
 # pipx がインストールされていない場合はインストール
@@ -44,9 +50,8 @@ firefox addons/*.xpi
 | jq |
 | xxd |
 | gdb |
-| ntpdate |
+| ntpsec-ntpdate |
 | xclip |
-| bloodhound |
 
 ## Clone/Download Repository
 | URL |
@@ -77,4 +82,3 @@ firefox addons/*.xpi
 | https://github.com/WithSecureLabs/chainsaw |
 | https://github.com/obsidianmd/obsidian-releases |
 | https://github.com/java-decompiler/jd-gui |
-| https://github.com/NationalSecurityAgency/ghidra |
