@@ -19,6 +19,7 @@
     - "/opt/jd-gui"
     - "/opt/BloodHound"
     - "/opt/burpsuite"
+    - "/opt/ligolo"
 
 - name: Download file
   become: true
@@ -44,3 +45,6 @@
     - { repo: "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.4/Obsidian-1.8.4.AppImage", dest: "/opt/obsidian" }
     - { repo: "https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/jd-gui-1.6.6.jar", dest: "/opt/jd-gui" }
     - { repo: "https://github.com/SpecterOps/bloodhound-cli/releases/latest/download/bloodhound-cli-linux-amd64.tar.gz", dest: "/opt/BloodHound" }
+    - { repo: "https://github.com/nicocha30/ligolo-ng/releases/download/v0.8.2/ligolo-ng_proxy_0.8.2_linux_amd64.tar.gz", dest: "/opt/ligolo" }
+    - { repo: "https://github.com/nicocha30/ligolo-ng/releases/download/v0.8.2/ligolo-ng_agent_0.8.2_linux_amd64.tar.gz", dest: "/opt/ligolo" }
+    - { repo: "https://github.com/nicocha30/ligolo-ng/releases/download/v0.8.2/ligolo-ng_agent_0.8.2_windows_amd64.zip", dest: "/opt/ligolo" }
