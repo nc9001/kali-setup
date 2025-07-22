@@ -32,7 +32,7 @@ if [ $(command -v ${playbook}) ] && [ $(command -v ${galaxy}) ]; then
     print_good "ansible installed"
 else
     print_error "Not found $playbook or $galaxy"
-    print_error "Try: pipx install ansible"
+    print_error "Try: pipx install --include-deps ansible"
     print_error "Try: source ~/.local/share/pipx/venvs/ansible/bin/activate"
     exit 2
 fi
