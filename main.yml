@@ -16,4 +16,6 @@
           visual_studio_code_extensions:
             - streetsidesoftware.code-spell-checker
             - ms-python.python
+            - ms-vscode.cpptools
             - DEVSENSE.phptools-vscode
+
