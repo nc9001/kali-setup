@@ -7,14 +7,14 @@
 
 - name: Download firefox addons
   ansible.builtin.get_url:
-    url: "{{ item }}"
-    dest: "addon/"
+    url: "{{ item.url }}"
+    dest: "addon/{{ item.dest }}"
     mode: "0644"
   loop:
-    - https://addons.mozilla.org/firefox/downloads/file/4228676/foxyproxy_standard-8.9.xpi
-    - https://addons.mozilla.org/firefox/downloads/file/4098688/user_agent_string_switcher-0.5.0.xpi
-    - https://addons.mozilla.org/firefox/downloads/file/4377180/deepl_translate-1.28.0.xpi
-    - https://addons.mozilla.org/firefox/downloads/file/4482384/wappalyzer-6.10.82.xpi
-    - https://addons.mozilla.org/firefox/downloads/file/4241002/cookie_editor-1.13.0.xpi
-    - https://addons.mozilla.org/firefox/downloads/file/4319544/simple_modify_header-1.9.0.xpi
-    - https://addons.mozilla.org/firefox/downloads/file/4425995/retire_js-2.1.3.xpi
+    - { url: "https://addons.mozilla.org/firefox/downloads/latest/user-agent-string-switcher/latest.xpi", dest: "user-agent-string-switcher.xpi" }
+    - { url: "https://addons.mozilla.org/firefox/downloads/latest/foxyproxy-standard/latest.xpi", dest: "foxyproxy-standard.xpi" }
+    - { url: "https://addons.mozilla.org/firefox/downloads/latest/deepl-translate/latest.xpi", dest: "deepl-translate.xpi" }
+    - { url: "https://addons.mozilla.org/firefox/downloads/latest/wappalyzer/latest.xpi", dest: "wappalyzer.xpi" }
+    - { url: "https://addons.mozilla.org/firefox/downloads/latest/cookie-editor/latest.xpi", dest: "cookie-editor.xpi" }
+    - { url: "https://addons.mozilla.org/firefox/downloads/latest/simple-modify-header/latest.xpi", dest: "simple-modify-header.xpi" }
+    - { url: "https://addons.mozilla.org/firefox/downloads/latest/retire-js/latest.xpi", dest: "retire-js.xpi" }
